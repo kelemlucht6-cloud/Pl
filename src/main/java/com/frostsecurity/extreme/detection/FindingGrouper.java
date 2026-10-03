@@ -1,0 +1,1 @@
+package com.frostsecurity.extreme.detection; import com.frostsecurity.extreme.core.SecurityFinding; import java.util.*; public final class FindingGrouper { public static Map<String,List<SecurityFinding>> byRule(List<SecurityFinding> f){Map<String,List<SecurityFinding>> m=new TreeMap<>();for(var x:f)m.computeIfAbsent(x.id(),k->new ArrayList<>()).add(x);return m;} }

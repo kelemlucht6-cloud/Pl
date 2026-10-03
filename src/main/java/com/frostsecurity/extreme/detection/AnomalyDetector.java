@@ -1,0 +1,3 @@
+package com.frostsecurity.extreme.detection;
+import java.util.*;
+public final class AnomalyDetector { public record Anomaly(String code,double score,String explanation){} public static Optional<Anomaly> detect(List<Long> intervals){if(intervals.size()<5)return Optional.empty();double avg=intervals.stream().mapToLong(Long::longValue).average().orElse(0);long max=intervals.stream().mapToLong(Long::longValue).max().orElse(0);if(avg>0&&max>avg*5)return Optional.of(new Anomaly("TIMING-001",0.72,"Um intervalo de evento foi >5x a média; isso é apenas um indicador observacional."));return Optional.empty();}}

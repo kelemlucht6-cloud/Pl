@@ -1,0 +1,1 @@
+package com.frostsecurity.extreme.vulnerabilities; import java.nio.file.*; import java.security.*; public final class DatabaseIntegrity { public static String sha256(Path p)throws Exception{byte[] b=MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(p));StringBuilder s=new StringBuilder();for(byte x:b)s.append(String.format("%02x",x));return s.toString();} }

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "frostscan",
+  "version": "${version}",
+  "name": "FROST SECURITY SCANNER EXTREME",
+  "description": "Auditoria de segurança passiva e autorizada para Minecraft Java.",
+  "authors": ["FROST Security"],
+  "license": "MIT",
+  "icon": "assets/frostscan/icon.png",
+  "environment": "client",
+  "entrypoints": { "client": ["com.frostsecurity.extreme.FrostScanClient"] },
+  "mixins": ["frostscan.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

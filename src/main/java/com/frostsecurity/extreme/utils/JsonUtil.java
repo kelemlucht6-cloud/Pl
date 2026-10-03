@@ -1,0 +1,1 @@
+package com.frostsecurity.extreme.utils; import com.google.gson.*; public final class JsonUtil { private JsonUtil(){} public static String pretty(Object o){return new GsonBuilder().setPrettyPrinting().create().toJson(o);} }
